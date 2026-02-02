@@ -1,0 +1,73 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Headland+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps&family=League+Spartan:wght@100..900&family=Quicksand:wght@300..700&display=swap');
+
+h1 { 
+    /*background-color:#CACECB;
+    /*width: 100%;*/
+    font-family: "Elsie Swash Caps", serif;
+    max-width: 750px;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+h2 {
+    font-family: "Quicksand", sans-serif;
+    max-width: 800px;
+    margin-left: 43%;
+    margin-right: 43%;
+}
+
+body {
+    background-color: #FFFAE2;
+    color: #2f4550ff; 
+}
+
+main {
+    font-family: "League Spartan", sans-serif;
+    max-width: 900px;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size:large;
+}
+
+img {
+    max-width: 300px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+figcaption {
+    max-width: 500px;
+    margin-left: 29%;
+    margin-right: 29%;
+}
+
+footer nav {
+    background-color: #BCAC9B;    
+   /* border-top: 0.1px solid #BCAC9B;
+    border-bottom: 0.1px solid #BCAC9B;*/
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    max-width: 800px;
+    margin-left: 32%;
+    margin-right: 32%;
+}
+
+nav li:not(:last-child)::after {
+    content: "|";
+    color: #2f4550ff;
+    margin-left: 20px;
+}
+
+footer nav a {
+    color: #2f4550ff;
+    text-decoration: none;
+}
+
+footer nav a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Headland+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+h1{
+    font-family: "Headland One", serif;
+    max-width: 800px;
+    margin-left: 23%;
+    margin-right: 23%;
+}
+
+header nav {
+    background-color: #BCAC9B;
+    border-top: 0.1px solid #BCAC9B;
+    border-bottom: 0.1px solid #BCAC9B;
+}
+
+header nav a {
+    color: #2f4550ff;
+    text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+body {
+    background-color: rgb(233, 220, 198);
+    color: #2f4550ff; 
+}
+
+main {
+    font-family: "Nunito", sans-serif;
+    max-width: 900px;
+}
+
+footer nav {
+    background-color: #BCAC9B;
+    border-top: 0.1px solid #BCAC9B;
+    border-bottom: 0.1px solid #BCAC9B;
+}
+
+footer nav a {
+    color: #2f4550ff;
+    text-decoration: none;
+}
+
+footer nav a:hover {
+  text-decoration: underline;
+}
