@@ -36,7 +36,16 @@ main {
     margin-right: 20%;
 }
 
-ul li::marker {
+/*ul li::marker {
+    content: "\002727";
+    color:#9A879D;
+}*/
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before {
     content: "\002727";
     color:#9A879D;
 }
