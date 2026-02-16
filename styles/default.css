@@ -59,6 +59,10 @@ figcaption {
     margin-right: 29%;
 }
 
+footer p {
+    text-align: center;
+}
+
 footer nav {
     background-color: #BCAC9B;    
 }
