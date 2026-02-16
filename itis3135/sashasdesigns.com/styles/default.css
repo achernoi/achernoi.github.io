@@ -1,0 +1,59 @@
+header img {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+header {
+    background-color: #9A879D;
+
+}
+
+h1{
+    font-family: "Headland One", serif;
+    width: 100%;
+    text-align: left;
+    font-size: 2.5em;
+    padding-top: 0.25em;
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 2px solid #563440;    
+}
+
+body {
+    background-color: #CFCFCD;
+    color: #563440; 
+}
+
+main {
+    font-family: "Nunito", sans-serif;
+    max-width: 900px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+ul li::marker {
+    content: "\2665";
+    color:#9A879D;
+}
+
+section {
+    /*border-left: 10px solid #162b48;*/
+    background-color: #c7bec9;
+}
+
+h3 {
+    border-top: 2px solid #563440;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  color: #666;
+  background-color: #D7DEDC;
+  margin-top: 40px;
+}

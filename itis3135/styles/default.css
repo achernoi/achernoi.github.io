@@ -41,6 +41,10 @@ p {
     margin-bottom: 1em;
 }
 
+footer p {
+    text-align: center;
+}
+
 footer nav {
     background-color: #c1e8e8;
     border-top: 0.1px solid #c1e8e8;
