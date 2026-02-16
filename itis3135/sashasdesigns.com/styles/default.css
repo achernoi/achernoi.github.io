@@ -37,7 +37,7 @@ main {
 }
 
 ul li::marker {
-    content: "\2665";
+    content: "\002727";
     color:#9A879D;
 }
 
