@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightblue;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: pink;
+  }
+}
+
+#navbar {
+  width: 30%;
+  height: 100%;
+}
+
+.nav-link {
+  display: block;
+  
+  padding: 8px 20px;
+}
+
+.h2-doc {
+    text-align: left;
+}

@@ -5,13 +5,74 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ITIS3135 | Survey Project</title>
         <link rel="stylesheet" href="styles/default.css">
+        <link rel="stylesheet" href="styles/survey.css">
         <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div data-include="components/header.html"></div>
         <main>
-            <h2>Survey Project</h2>
-            <p>This page will include my freeCodeCamp Survey Certification Project.</p>
+            <h2 id="title">Survey Form</h2>
+            <p id="description">Thank you for taking time to help us improve our cafe.</p>
+            <form id="survey-form">
+                <fieldset class="form-group">
+                    <label for="name" id="name-label">Enter your name: 
+                        <input id="name" type="text" placeholder="Your name" required>
+                    </label>
+                <label for="email" id="email-label">Enter your email: 
+                    <input id="email" type="email" placeholder= "Your email" required>
+                </label>
+                <div>
+                    <label for="number" id="number-label">Enter your age (optional): </label>
+                    <input id="number" type="number" style="width: 5em" min="1" max="100" placeholder="Your age" required>
+                </div>
+                </fieldset>
+                <fieldset>
+                    <label>
+                    What role suits you the best?
+                    <select id="dropdown">
+                        <option>Student</option>
+                        <option>Full-Time Job</option>
+                        <option>Other</option>
+                    </select>
+                    </label>
+
+                    <p>Did you enjoy your time at Sweet Cat Cafe?</p>
+                    <label>
+                    <input type="radio" name="pref-format" value="format"/>
+                    Yes
+                    </label>
+                    <label>
+                    <input type="radio" name="pref-format" value="format" />
+                    No
+                    </label>
+
+                    <p>How often do you visit our coffee shop?</p>
+                    <label>
+                    <input type="checkbox" value="choose" />
+                    Daily
+                    </label>
+                    <label>
+                    <input type="checkbox" value="choose" />
+                    A few times a week
+                    </label>
+                    <label>
+                    <input type="checkbox" value="choose" />
+                    Weekly
+                    </label>
+                    <label>
+                    <input type="checkbox" value="choose" />
+                    Monthly
+                    </label>
+                    <label>
+                    <input type="checkbox" value="choose" />
+                    This is my first time
+                    </label>
+                    </fieldset>
+                    <fieldset>
+                    <textarea rows="5" cols="30" placeholder="Any additional comments or suggestions?"></textarea>
+                    </fieldset>
+                    <input type="submit" value="Submit Survey" id="submit">
+            </form>
         </main>
         <div data-include="components/footer.html"></div>
         <script src="scripts/HTMLInclude.min.js"></script>

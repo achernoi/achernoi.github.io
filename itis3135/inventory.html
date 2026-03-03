@@ -5,15 +5,121 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ITIS3135 | Inventory Project</title>
         <link rel="stylesheet" href="styles/default.css">
+        <link rel="stylesheet" href="styles/inventory.css">
         <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div data-include="components/header.html"></div>
+        <h1>Coffee Inventory</h1>
         <main>
-            <h2>Inventory Project</h2>
-            <p>This page will include my freeCodeCamp Inventory Certification Project.</p>
+        <table>
+            <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Origin</th>
+                <th>Status</th>
+                <th>Roast</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr class="online-only">
+                <td><span class="item">Brasil Fazenda</span></td>
+                <td>$15.99</td>
+                <td>Brasil</td>
+                <td><span class="status">Online Only</span></td>
+                <td>
+                <span class="rate two">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="sold-out">
+                <td>Columbian Supremo</td>
+                <td>$11.99</td>
+                <td>Columbia</td>
+                <td><span class="status">Sold Out</span></td>
+                <td>
+                <span class="rate three">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="in-stock">
+                <td>Costa Rica Tarrazu</td>
+                <td>$16.99</td>
+                <td>Costa Rica</td>
+                <td><span class="status">In Stock</span></td>
+                <td>
+                <span class="rate two">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="online-only">
+                <td>Kona Blend</td>
+                <td>$20.99</td>
+                <td>Hawaii</td>
+                <td><span class="status">Online Only</span></td>
+                <td>
+                <span class="rate one">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="in-stock">
+                <td>Tanzanian Peaberry</td>
+                <td>$17.99</td>
+                <td>Tanzania</td>
+                <td><span class="status">In Stock</span></td>
+                <td>
+                <span class="rate three">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="online-only">
+                <td>Monte Alegre</td>
+                <td>$15.99</td>
+                <td>Brazil</td>
+                <td><span class="status">Online only</span></td>
+                <td>
+                <span class="rate one">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="in-stock">
+                <td>Cajamarca</td>
+                <td>$18.99</td>
+                <td>Peru</td>
+                <td><span class="status">In Stock</span></td>
+                <td>
+                <span class="rate two">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
         </main>
         <div data-include="components/footer.html"></div>
         <script src="scripts/HTMLInclude.min.js"></script>
-    </body>
+</body>
+
 </html>

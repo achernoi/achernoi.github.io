@@ -7,6 +7,11 @@ h1{
     font-size: 2em;
 }
 
+h2 {
+    text-align: center;
+    width: 100%;
+}
+
 header nav {
     background-color: #aed2d2;
     border-top: 0.1px solid #c2eaea;
@@ -28,13 +33,17 @@ header nav a:hover {
 body {
     background-color: rgb(218, 241, 245);
     color: #2f4550ff; 
+    display: flex;
+    flex-direction: column;
 }
 
 main {
     font-family: "Nunito", sans-serif;
-    max-width: 900px;
+    /*max-width: 1000px;*/
     margin-left: 20%;
     margin-right: 20%;
+    overflow-y: auto;
+    flex-grow: 1;
 }
 
 p {
@@ -50,6 +59,9 @@ footer nav {
     border-top: 0.1px solid #c1e8e8;
     border-bottom: 0.1px solid #c1e8e8;
     text-align: center;
+    bottom: 0px;
+    width: 100%;
+    /*position: fixed;*/
 }
 
 footer nav a {
