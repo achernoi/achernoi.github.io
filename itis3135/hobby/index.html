@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <title>Sasha Chernoivan's Sweet Cat | ITIS3135 | Hobby</title>
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+        <script>
+            function onLoad() {
+                const showSection = document.getElementById('what');
+                if (showSection) {
+                    showSection.style.display = 'block';
+                }
+            }
+        </script> 
+    
+        <style>
+            body {
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 18px;
+                color: #4f2914;
+                margin: 0;
+                background-color: #392A16;
+                text-align: center;
+            }
+
+            header {
+                background-color: #ca9569;
+                color: rgb(110, 80, 51);
+                padding: 20px;
+                text-align: center;
+            }
+
+            .navbar {
+                display: flex;
+                align-items: center;
+                background-color: #8f613f;
+                padding: 10px 20px;
+                font-family: sans-serif;
+            }
+
+            .nav-link {
+                color: rgb(247, 222, 196);
+                text-decoration: none;
+                padding: 8px 12px;
+                transition: background-color 0.3s ease, color 0.3s ease; 
+                border-radius: 4px;
+            }
+
+            .nav-link:hover {
+                background-color: #b07a50;
+            }
+
+            .separator {
+                margin: 0 10px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                opacity: 0.7;
+            }
+
+            .data-section {
+                padding: 30px;
+                display: none;
+            }
+
+            h1 {
+                font-size: 40px;
+                font-family:cursive;
+            }
+
+            h2 {
+                color: #6c492e;
+                text-align: left;
+                padding-bottom: 15px;
+                border-bottom: 1.5px solid #4f2914;
+            }
+
+            h3, h4 {
+                text-align: left;
+            }
+
+            main {
+                margin: 5% 20% 5% 20%;
+                background-color: #ba9880;
+            }
+
+            p {
+               text-align: left; 
+            }
+
+            figure {
+                border: 1px solid rgb(76, 39, 4);
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            th, td {
+                border: 1px solid #7d5d42;
+                padding: 5px;
+            }
+
+            ol {
+                text-align: left;
+            }
+
+            footer {
+                background-color: #8f613f;
+                padding: 8px;
+                color: rgb(247, 222, 196);
+            }
+
+            footer nav a {
+                text-decoration: none;
+                color: rgb(204, 157, 107);
+            }
+
+            footer a:hover {
+                color: #6e4c32;
+                text-decoration: none;
+            }
+
+        </style>
+    </head>
+    <body onload="onLoad()">
+        <header>
+            <h1>Baking</h1>
+            <nav class="navbar">
+                    <a href="#home" class="nav-link" onclick="showSection('what')">What</a>
+                    <div class="separator">🧁</div>
+                    <a href="#who" class="nav-link" onclick="showSection('who')">Who</a>
+                    <div class="separator">🧁</div>
+                    <a href="#when" class="nav-link" onclick="showSection('when')">When</a>
+                    <div class="separator">🧁</div>
+                    <a href="#where" class="nav-link" onclick="showSection('where')">Where</a>
+                    <div class="separator">🧁</div>
+                    <a href="#how" class="nav-link" onclick="showSection('how')">How</a>
+                    <div class="separator">🧁</div>
+                    <a href="#why" class="nav-link" onclick="showSection('why')">Why</a>
+                    <div class="separator">🧁</div>
+                    <a href="#ai-prompts" class="nav-link" onclick="showSection('ai-prompts')">AI Prompts</a>
+            </nav>
+        </header>
+        <main>
+            <section id="what" class="data-section">
+                <h2>What is Baking?</h2>
+                <p>
+                    Baking is the art of creating delicious foods like cookies, breads, and pasteries using different
+                    ingredients. It is both a type of science and a creative hobby that can be very exciting. Many people
+                    enjoy baking because it allows them to experiment with different flavors and ingredients and create 
+                    delicious treats for their friends and family. Baking is a great hobby because it always comes with a 
+                    reward in the end.
+                </p>
+                <figure>
+                    <img src="images/bread_image.jpeg" alt="bread" width="550" height="450">
+                    <figcaption>This is homemade sourdough bread.</figcaption>
+                </figure>
+                <form>
+                    <h4>Add your input here:</h4>
+                    <p>Do you enjoy baking?</p>
+                    <fieldset style="text-align: left; border: 1px solid #7d5d42">
+                        <label>
+                            <input type="radio" name="pref-format" value="format"/>Yes
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="pref-format" value="format" />No
+                        </label>
+                    </fieldset>
+                    <p>What is your favorite baked good?</p>
+                    <fieldset style="text-align: left; border: 1px solid #7d5d42">
+                        <label>
+                            <input type="checkbox" name="dessert" value="cheesecake">Cheesecake
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="dessert" value="pie">Pie
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="dessert" value="cookie">Cookie
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="dessert" value="cake">Cake
+                        </label>
+                    </fieldset>
+                    <br>
+                    <div style="text-align: left;"><input type="submit" value="Submit Survey" id="submit" style="background-color: #8b5e3c;"></div>
+                </form>
+            </section>
+            <section id="who" class="data-section">
+                <h2>The Baker (Who am I?)</h2>
+                <p>
+                    My name is Sasha Chernoivan and I enjoy baking as a relaxing and creative hobby. I love trying out new 
+                    recipes and experimenting with different ingredients. Whether it is cookies, cakes, or different kinds of bread, 
+                    I love making all kinds of baked goods and try out new things. Anyone can bake with practice, patience, and 
+                    an interest to experiment. One of my favorite thing to bake is banana bread and you can check out the recipe
+                    below. 
+                </p>
+                <h3>My favorite recipe:</h3>
+                <figure>
+                    <img src="images/banana-bread.jpg" alt="banana bread" width="525" height="350">
+                    <figcaption>
+                        Banana bread.<br>
+                        <i style="font-size: 80%;">Free image from pixabay.com</i>
+                    </figcaption>
+                </figure>
+                <h4>Ingredients:</h4>
+                <table>
+                    <tr>
+                        <td>1.</td>
+                        <td>3</td>
+                        <td>Ripe bananas (medium/large)</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>1/2 cup</td>
+                        <td>Unsalted butter</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>3/4 cup</td>
+                        <td>Granulated sugar</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>2</td>
+                        <td>Large eggs</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>1 1/2 cups</td>
+                        <td>All-purpose flour</td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>1 tsp</td>
+                        <td>Baking soda</td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>1/2 tsp</td>
+                        <td>Salt</td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>1/2 tsp</td>
+                        <td>Vanilla extract</td>
+                    </tr>
+                    <tr>
+                        <td>9.</td>
+                        <td>1 cup</td>
+                        <td>Chocolate chips</td>
+                    </tr>
+                </table>
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Preheat the oven to 350°F. Grease and flour a bread loaf pan (9.25 long x 5.25 wide x 2.75 deep). Lightly roast walnuts on a skillet, continuously stirring so they won’t burn. Coarsely chop and cool to room temperature.</li>
+                    <li>In a mixing bowl, cream together 8 Tbsp softened butter and 3/4 cup sugar (or honey if using honey).</li>
+                    <li>Mash bananas with a fork until the consistency of chunky applesauce and add them to the batter along with 2 eggs, mixing until blended.</li>
+                    <li>In a separate bowl, whisk together: 1 1/2 cups of flour, 1 tsp of baking soda and 1/2 tsp of salt then add to batter.</li>
+                    <li>Add 1/2 tsp of vanilla extract and mix in chopped walnuts and raisins. Pour into prepared loaf pan. Bake at 350°F for 55-60 min or until a toothpick inserted into the center comes out clean. Let banana bread rest for 10 min before transferring to a wire rack to cool.</li>
+                </ol>
+            </section>
+            <section id="when" class="data-section">
+                <h2>When to Bake?</h2>
+                <p>
+                    Baking can be done any time of the year, but certain seasons are perfect for specific treats. For 
+                    example, the holidays are the perfect time to bake cakes and pies, while lighter desserts like cupcakes 
+                    and cookies are often made during the summer. The great thing about baking is that you can make anything you 
+                    want, anytime you want. Here are some popular baking treats to make during different holidays.
+                </p>
+                <div>
+                    <table style="margin-left: auto; margin-right: auto;">
+                        <tr>
+                            <th>Holiday</th>
+                            <th>Best Baked Treats</th>
+                        </tr>
+                        <tr>
+                            <td>Christmas</td>
+                            <td>Gingerbread Cookies, Sugar Cookies</td>
+                        </tr>
+                        <tr>
+                            <td>Thanksgiving</td>
+                            <td>Pumpkin Pie, Apple Pie</td>
+                        </tr>
+                        <tr>
+                            <td>Halloween</td>
+                            <td>Pumpkin Bread, Candy Corn Cookies</td>
+                        </tr>
+                        <tr>
+                            <td>Fourth of July</td>
+                            <td>Berry Pie, Strawberry Shortcake</td>
+                        </tr>
+                    </table>
+                </div>
+                <figure>
+                    <img src="images/christmas-cookies.jpeg" alt="christmas cookies">
+                    <figcaption>
+                        Cookies for Christmas.<br>
+                        <i style="font-size: 80%;">Free image from pixabay.com</i>
+                    </figcaption>
+                </figure>
+            </section>
+            <section id="where" class="data-section">
+                <h2>Where to Bake?</h2>
+                <p>
+                    Most of the time, baking is done in the kitchen where there is access to an oven and baking tools. There 
+                    are also different kinds of baking classes and bakeries where people have the opportunity to learn new 
+                    baking skills and techniques. While it is important to have a good location for baking, it is also important 
+                    to have the best ingredients to be sure your treats turn out delicious. 
+                </p>
+                <p>
+                    To find the best organic baking ingredients, you generally have three main options depending on whether 
+                    you value convenience, bulk pricing, or freshness.
+                </p>
+                <ol>
+                    <li>
+                        <strong>Natural & Health Food Stores: </strong>Specialty grocery chains are the most reliable "one-stop shops" for organic staples.
+                        <ul>
+                            <li>National Chains: Stores like Whole Foods Market or Sprouts carry extensive organic private-label brands (like 365 or Sprouts Organic) 
+                                which are often cheaper than name brands.</li>
+                            <li>Local Co-ops: Independent health food stores or food cooperatives usually vet their suppliers strictly, ensuring high-quality 
+                                organic standards for flour, sugar, and dairy.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Online Specialty Retailers: </strong>This is the best route for hard-to-find items or buying in large quantities to save money.
+                        <ul>
+                            <li>Direct from Mills: Companies like King Arthur or Bob's Red Mill sell organic flours and grains directly through their websites.</li>
+                            <li>Membership Services: Sites like Thrive Market or Azure Standard specialize in organic goods, with the latter being a go-to for 
+                                bulk-buying 25lb to 50lb bags of organic flour or sugar.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Farmers' Markets: </strong>For "wet" ingredients, the farmers' market is usually superior to any shelf-stable option.
+                        <ul>
+                            <li>Eggs & Dairy: You can find pasture-raised organic eggs and grass-fed butter or milk, which significantly impact the flavor and color of your bakes.</li>
+                            <li>Produce: If your recipe calls for fruit, nuts, or honey, buying seasonally and locally ensures the ingredients haven't been sitting in cold storage for months.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <figure>
+                    <img src="images/cooking-process.jpeg" alt="baking process">
+                    <figcaption>
+                        Making pie with the best ingredients.<br>
+                        <i style="font-size: 80%;">Free image from pixabay.com</i>
+                    </figcaption>
+                </figure>
+            </section>
+            <section id="how" class="data-section">
+                <h2>How to Start Baking?</h2>
+                <p>
+                    For someone to start baking, they need basic ingredients like flour, eggs, sugar, and any additional 
+                    ingredients needed for specific recipes. Finding simple recipes and following them step by step will 
+                    make starting the baking journey simple. The great thing about taking up baking as a hobby is that you 
+                    can start small and work your way up. 
+                </p>
+                <p>A few tips for beginners:</p>
+                <ul style="text-align: left;">
+                    <li>Start with simple recipes and explore more as you go.</li>
+                    <li>Make sure you measure your ingredients carefully and correctly.</li>
+                    <li>Preheat the oven before you combine your ingredients.</li>
+                </ul>
+                <figure>
+                    <img src="images/baking-tools.jpeg" alt="baking tools">
+                    <figcaption>
+                        The tools you need to get started.<br>
+                        <i style="font-size: 80%;">Free image from pixabay.com</i>
+                    </figcaption>
+                </figure>
+                <h4>Watch this video to get started with baking:</h4>
+                <figure>
+                    <iframe 
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/c9cGYWoh8to?si=7RIAhpC5WSuHis1n" 
+                        title="YouTube video player"  
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </figure>
+            </section>
+            <section id="why" class="data-section">
+                <h2>Why Bake?</h2>
+                <p>
+                    Baking is a hobby you can enjoy because it combines creativity and patience, and leads to delicious results.
+                    It is both relaxing and rewarding to combine a few simple ingredients, and be able to turn it into a new 
+                    creation. Baking can also bring people together by sharing your results and ideas with others. Overall, baking is a 
+                    hobby that can not only bring you good food, but also it is fun for yourself and others.  
+                </p>
+                <p>
+                    In the United States, roughly 277 million people engage in home baking to some degree. Home baking 
+                    experienced a significant increase during the 2020 pandemic, followed by a subsequent steady rise driven by 
+                    economic factors and hobbyist interest through 2026. This graph shows how the number of home baking changed
+                    in the span of eleven years. 
+                </p>
+                <figure>
+                    <img src="images/home-bakers-graph.png" alt="bakers graph" width="600" height="450">
+                    <figcaption>
+                        The estimated number of home bakers in the US (2015-2026). <br>
+                        <i style="font-size: 80%;">AI Prompt: Give me a graph of number of people baking from 2015 to 2026</i>
+                    </figcaption>
+                </figure>
+                <h4>Why is Baking a Good Hobby?</h4>
+                <ol>
+                    <li><strong>Stress Relief and Relaxation: </strong>Baking can be calming because staying focused
+                        on a task can help people relax and reduce stress levels.</li>
+                    <li><strong>Enjoyment and Creativity: </strong>Many people bake because they enjoy the process. This hobby
+                        can allow you to show creativity with decorating treats and experimenting with different flavors and ingredients.</li>
+                    <li><strong>Celebrations and Traditions: </strong>Baking goods can make holidays and events more enjoyable and delicious.</li>
+                    <li><strong>Business or Income: </strong>Many people bake professionally or sell the goods they bake at home through markets, 
+                        bakeries, or even their own businesses.</li>
+                </ol>
+            </section>
+            <section id="ai-prompts" class="data-section">
+                <h2>AI Prompts</h2>
+                <p>I used ChatGPT to help complete this assignment. I used it for: </p>
+                <ul>
+                    <li>
+                        <p><strong>Used: </strong>to get the estimated number of home bakers in the United States.</p>
+                        <p><strong>Prompt:</strong><q><i>Give me a graph of number of people baking from 2015 to 2026</i></q></p><br>
+                    </li>
+                    <li>
+                        <p><strong>Used: </strong>to get the best locations for buying baking ingredients.</p>
+                        <p><strong>Prompt: </strong><q><i>Where to find a best organic ingredients for baking at home</i></q>,
+                        <q><i>Make your answer more generic</i></q></p><br>
+                    </li>
+                    <li>
+                        <p><strong>Used: </strong>to generate JavaScript to make only one secrion visible at a time.</p>
+                        <p><strong>Prompt: </strong><q><i>For html page with multiple sections create script to select one section and hide others</i></q></p>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <nav>
+                <div>Page designed by <a href="https://achernoi.github.io/itis3135/sashasdesigns.com/">Sasha's Designs</a></div>
+            </nav>
+        </footer>
+        <script src="scripts/HTMLInclude.min.js"></script> 
+        <script>
+            function showSection(sectionId) {
+                const sections = document.querySelectorAll('.data-section');
+                //hide all sections
+                sections.forEach((section) => {
+                    section.style.display = 'none';
+                });
+                //show selected section
+                const showSection = document.getElementById(sectionId);
+                if (showSection) {
+                    showSection.style.display = 'block';
+                }
+            }
+        </script>   
+    </body>
+</html>
