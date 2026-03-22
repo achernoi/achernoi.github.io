@@ -31,11 +31,8 @@ function renderVars(template, data) {
 // {{#links}} ... {{/links}}
 // Uses data.links (array). Adds {{index}} automatically.
 function renderRepeats(template, data) {
-    alert("renderRepeats");
     return template.replace(/\{\{#(\w+)\}\}([\s\S]*?)\{\{\/\1\}\}/g, (_, arrayName, block) => {
-        alert(arrayName);
         const arr = data[arrayName];
-        alert(arr);
         if (!Array.isArray(arr) || arr.length === 0) return "";
 
     return arr.map((item, i) => {
@@ -88,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         headerTitle = "Introduction Page";
         const introductionData = {
+            picCaption: "One of my favorite beach spots in California.",
             background: {
                 personalStatement: " I just transferred to UNC Charlotte from CPCC and I am a junior studying computer science with a concentration in Web/Mobile Development and Software Engineering.",
                 personalBackground: " I am 21 years old and I love photography, painting, and traveling",
@@ -101,16 +99,32 @@ document.addEventListener("DOMContentLoaded", () => {
                {
                     courseName: "11 Computer Science Program, Identity, Career:",
                     reason: "11 Required course."
+                },
+                {
+                    courseName: "hhh ITIS 3130 - Introduction to Human-Centered Computing:",
+                    reason: "nnn I thought this would be an interesting course."     
                 }
-            ]
+            ],
+            extras: {
+                quote: "Life is short, the world is wide, and I want to make some memories",
+                quoteAuthor: "Donna Sheridan, Mamma Mia"
+            }
         };
         
+/*
+                        <li><b>ITSC 2600 - Computer Science Program, Identity, Career:</b> Required course.</li>
+                        <li><b>ITIS 3130 - Introduction to Human-Centered Computing:</b> I thought this would be an interesting course.</li>
+                        <li><b>ITIS 3135 - Front-End Web Application Development:</b> Useful course.</li>
+                        <li><b>ITSC 3688 - Computers and Their Impact on Society:</b> Required course.</li>
+                        <li><b>ITCS 3112 - Design Implementation of Object-Oriented Systems:</b> I thought this course would be useful and it is a required course.</li>
+ 
+*/
 
         const htmlTemplate = `
                 <h2>Introduction</h2>
                 <figure>
                     <img src="itis3135/images/myimage.png" alt="My introduction image." height="400" width="300">
-                    <figcaption><em>One of my favorite beach spots in California.</em></figcaption>
+                    <figcaption><em>{{picCaption}}</em></figcaption>
                 </figure>
                 <p>{{background.personalStatement}}</p>
                 <h3>Background</h3>
@@ -125,18 +139,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     <li><b>Courses I'm Taking and Why:</b>
                         <ol>
                         {{#courses}}
-                        <li><strong>{{courseName}}</strong>{{reason}}</li>
-                        {{/cources}}
-
-                        <li><b>ITSC 2600 - Computer Science Program, Identity, Career:</b> Required course.</li>
-                        <li><b>ITIS 3130 - Introduction to Human-Centered Computing:</b> I thought this would be an interesting course.</li>
-                        <li><b>ITIS 3135 - Front-End Web Application Development:</b> Useful course.</li>
-                        <li><b>ITSC 3688 - Computers and Their Impact on Society:</b> Required course.</li>
-                        <li><b>ITCS 3112 - Design Implementation of Object-Oriented Systems:</b> I thought this course would be useful and it is a required course.</li>
-                        </ol>
+                            <li><strong>{{courseName}}</strong>{{reason}}</li>
+                        {{/courses}}
+                       </ol>
                     </li>
                 </ul> 
-                <blockquote>“Life is short, the world is wide, and I want to make some memories” -Donna Sheridan,<cite> Mamma Mia</cite></blockquote> 
+                <blockquote>{{extras.quote}} -{{extras.quoteAuthor}}</blockquote> 
         `;
 
         outputdiv.innerHTML = renderTemplate(htmlTemplate, introductionData);
