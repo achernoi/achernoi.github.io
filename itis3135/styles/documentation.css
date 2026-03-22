@@ -11,7 +11,7 @@ body {
     background-color: pink;
   }
 }
-
+/*
 #navbar {
   width: 30%;
   height: 100%;
@@ -19,10 +19,41 @@ body {
 
 .nav-link {
   display: block;
-  
   padding: 8px 20px;
+}*/
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #2f4550ff;
+  padding: 10px 20px;
+  font-family: sans-serif;
+  color:rgb(173, 185, 192)
+}
+
+.nav-link {
+  color: rgb(206, 226, 243);
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  background-color: rgb(104, 169, 203);
+}
+
+h2 {
+  border-bottom: 1px solid #12415a;
+  padding: 5px;
+  text-align: left;
 }
 
 .h2-doc {
-    text-align: left;
+    text-align: center;
+}
+
+h3 {
+  text-align: center;
+  color:rgb(195, 233, 251)
 }
