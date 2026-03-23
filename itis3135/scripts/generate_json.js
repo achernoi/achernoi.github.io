@@ -1,47 +1,16 @@
-function getValue(el) {
-    return el ? el.value.trim() : "";
-}
-
-function courcesToJsonArray(rows) { 
-    const data = Array.from(rows).map((row) => {
-
-    department = getValue(row.querySelector('input[name="course-dept[]"]'));
-    number = getValue(row.querySelector('input[name="course-num[]"]'));
-    courseName = getValue(row.querySelector('input[name="course-name[]"]'));
-    reason = getValue(row.querySelector('input[name="course-reason[]"]'));
-    return { department, number, courseName, reason };
-});
-
-    return data; // <-- this is the JSON-ready array of objects
-}
-
-function sectionsToJsonArray(rows) {        
-    const data = Array.from(rows).map((row) => {
-      // If you keep name="name[]" and name="url[]" as in your HTML:
-      if (row.querySelector('input[name="urlname[]"]'))
-        name = row.querySelector('input[name="urlname[]"]').value;
-      else 
-        name = "";
-
-      if (row.querySelector('input[name="url[]"]').value)         
-        url  = row.querySelector('input[name="url[]"]').value;
-      else 
-        url  = "";
-      return { name, url };
-    });
-
-    return data; // <-- this is the JSON-ready array of objects
-}
-
 function generateJson() {
-
     const form = document.getElementById("intro_form");
+
+    if (!form.checkValidity()) {        
+        form.reportValidity(); // Optional: report all validity issues to the user
+        return;
+    }
+
     const websiteSections = document.querySelectorAll('[data-website]');
     const courcesSections = document.querySelectorAll('[data-course]');
 
+    /*
     const formData = new FormData(form);
-
-
     const introduction = {
         firstName: "",
         middleName: "",
@@ -90,8 +59,9 @@ function generateJson() {
     introduction.background.subjectBackground = (formData.get("subjectBackground"));
     introduction.background.primaryComp = (formData.get("primaryComp"));
     introduction.background.backupComp = (formData.get("backupComp"));
+ */
 
-
+    const introduction = createJsonFromForm(form, courcesSections, websiteSections);
     const jsonString = JSON.stringify(introduction, null, 4);
 
     const outputdiv = document.getElementById("output_result");
@@ -103,7 +73,7 @@ function generateJson() {
                 <h3>Generated JSON Data:</h3>
                 <pre><code class="language-json">${jsonString}</code></pre>
                 <div style="text-align: center; margin-top: 20px;">
-                    <button type="button" id="json-back-btn">Back to Form</button>
+                    <button type="button" id="jsonBackToFormBtn">Back to Form</button>
                 </div>
             </section>
         `;
@@ -111,6 +81,13 @@ function generateJson() {
     if (typeof hljs !== "undefined") {
       hljs.highlightAll();
     }    
+
+    document.getElementById("jsonBackToFormBtn").onclick = () => {
+      outputdiv.style.display = "none";
+      form.style.display = "block";
+      pageTitle.innerText = "Introduction Form";
+      //formSubtitle.style.display = "block";
+    };
 
     form.style.display = "none";
     outputdiv.style.display = "block";
