@@ -11,7 +11,7 @@ const htmlTemplate = `
     <body>
         <header>
             <h1>
-                Sasha Chernoivan
+                {{firstName}} {{nickname}} {{middleName}} {{lastName}}
             </h1>
             <nav>
                 <a href="index.html">Home</a>
@@ -20,20 +20,20 @@ const htmlTemplate = `
         <main>
         <h2>Introduction</h2>
         <figure>
-            <img src="itis3135/images/myimage.png" alt="My introduction image." height="400" width="300">
+            <img src="{{imageURL}}" alt="My introduction image." height="400" width="300">
             <figcaption><em>{{picCaption}}</em></figcaption>
         </figure>
         <p>{{background.personalStatement}}</p>
         <h3>Background</h3>
         <ul>
-            <li><strong>Personal Background:</strong>{{background.personalBackground}}</li>
-            <li><b>Professional Background:</b>{{background.professionalBackground}}</li>
-            <li><b>Academic Background:</b>{{background.academicBackground}}
+            <li><strong>Personal Background: </strong>{{background.personalBackground}}</li>
+            <li><b>Professional Background: </b>{{background.professionalBackground}}</li>
+            <li><b>Academic Background: </b>{{background.academicBackground}}
             </li>
-            <li><b>Background in this Subject:</b>{{background.subjectBackground}}</li>
-            <li><b>Primary Work Computer:</b>{{background.primaryComp}}</li>
-            <li><b>Backup Work Computer & Location Plan:</b>{{background.backupComp}}</li>
-            <li><b>Courses I'm Taking and Why:</b>
+            <li><b>Background in this Subject: </b>{{background.subjectBackground}}</li>
+            <li><b>Primary Work Computer: </b>{{background.primaryComp}}</li>
+            <li><b>Backup Work Computer & Location Plan: </b>{{background.backupComp}}</li>
+            <li><b>Courses I'm Taking and Why: </b>
                 <ol>
                 {{#courses}}
                     <li><strong>{{department}} {{number}} - {{courseName}}:</strong> {{reason}}</li>
@@ -41,12 +41,21 @@ const htmlTemplate = `
                 </ol>
             </li>
         </ul> 
-        <blockquote>{{extras.quote}} -{{extras.quoteAuthor}}</blockquote> 
+        <blockquote>"{{extras.quote}}" -{{extras.quoteAuthor}}</blockquote> 
 
         <div style="text-align: center; margin-top: 30px;">
             <button type="button" id="resetBtnResult">Fill out the form again</button>
         </div>
         </main>
+            <footer>
+        <nav>
+            <ul>
+            {{#websiteLinks}}
+                <li><a href="{{url}}">{{name}}</a></li>
+            {{/websiteLinks}}
+            </ul>
+        </nav>
+    </footer>
     </body>
  </html>   
  `;
@@ -89,6 +98,9 @@ function sectionsToJsonArray(rows) {
 function createJsonFromForm(form, courcesSections, websiteSections) {
     const formData = new FormData(form);
 
+    const imageInput = document.getElementById("imageInput");
+    const imageUrl = imageInput.files && imageInput.files[0] ? URL.createObjectURL(imageInput.files[0]) : "images/myimage.png";
+
     const introduction = {
         firstName: "",
         middleName: "",
@@ -100,6 +112,7 @@ function createJsonFromForm(form, courcesSections, websiteSections) {
         mascotAnimal: "",
         divider: "",
         picCaption: "",
+        imageURL: imageUrl,
         background: {
             personalStatement: formData.get("personalStatement"),
             personalBackground: formData.get("personalBackground"),
@@ -312,10 +325,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         section.innerHTML = `
             <div data-course>
-                <input type="text" class="course-dept" name="course-dept[]" required>
-                <input type="text" class="course-num" name="course-num[]" required>
-                <input type="text" class="course-name" name="course-name[]" required>
-                <input type="text" class="course-reason" name="course-reason[]" required>
+                <input type="text" class="course-dept" name="course-dept[]" placeholder="Course Department" required>
+                <input type="text" class="course-num" name="course-num[]" placeholder="Course Number" required>
+                <input type="text" class="course-name" name="course-name[]" placeholder="Course Name" required>
+                <input type="text" class="course-reason" name="course-reason[]" placeholder="Course Reason" required>
                 <button type="button" class="delete-course" data-coursedelete>Delete</button>
             </div>    
         `;
@@ -345,10 +358,10 @@ document.addEventListener("DOMContentLoaded", () => {
         section.innerHTML = `
             <div data-website>
                 <label>Website Name:
-                    <input type="text" class="website-name" name="urlname[]" required>
+                    <input type="text" class="website-name" name="urlname[]" placeholder="Website Name" required>
                 </label>
                 <label>URL:
-                    <input type="url" class="link-url" name="url[]" required>
+                    <input type="url" class="link-url" name="url[]" placeholder="URL" required>
                 </label>
                 <button type="button" class="delete-link" data-websitedelete>Delete</button>
             </div>`;

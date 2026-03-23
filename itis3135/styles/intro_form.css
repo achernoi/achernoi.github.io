@@ -11,6 +11,45 @@ h2 {
     padding-left: 20%;
 }
 
+fieldset {
+  border: 1px solid #4e6379;
+  border-radius: 2px;
+  padding: 0.5rem;
+  
+}
+
+.delete-link, .delete-course {
+    padding: 3px 5px;
+    margin-top: 4px;
+    border: none;
+    background-color: rgb(210, 169, 169);
+    border-radius: 4px;
+}
+
+.add-course {
+    padding: 3px 5px;
+    margin-top: 4px;
+    border: none;
+    background-color: rgb(158, 189, 201);
+    border-radius: 4px;
+}
+
+#addWebsiteLinkBtn {
+    padding: 3px 5px;
+    margin-top: 4px;
+    border: none;
+    background-color: rgb(158, 189, 201);
+    border-radius: 4px;
+}
+
+#resetBtn, #clearButton, #generateHtml, #generateJson, #submitBtn {
+    padding: 10px 12px;
+    margin-top: 4px;
+    border: none;
+    background-color: rgb(158, 189, 201);
+    border-radius: 4px;
+}
+
 /*input[type="text"] {
     box-sizing: border-box;
     display: block;

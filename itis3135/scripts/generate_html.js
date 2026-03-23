@@ -21,7 +21,8 @@ function generateHtml(event) {
         .replace(/'/g, "&#039;");
     };
 
-    const htmlString = 
+    const htmlString = renderTemplate(htmlTemplate, introductionData);
+    /*
         `<!DOCTYPE html>
         <html lang="en">
         <body>
@@ -33,6 +34,7 @@ function generateHtml(event) {
             </main>
         </body>
         </html>`;
+    */   
 
 
                 

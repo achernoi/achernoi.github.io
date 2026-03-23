@@ -27,66 +27,66 @@
                 <fieldset>
                     <legend>Personal Information</legend>
                     <label>First Name: 
-                        <input type="text" name="firstName" value="Sasha" required>
+                        <input type="text" class="" name="firstName" value="Sasha" placeholder="First Name" required>
                     </label><br>
                     <label>Middle Name/Initial (Optional): 
-                        <input type="text" name="middleName" value="">
+                        <input type="text" name="middleName" value="" placeholder="Middle Name">
                     </label><br>
                     <label>Nickname (Optional):
-                        <input type="text" name="nickname" value="">
+                        <input type="text" name="nickname" value="" placeholder="Nickname">
                     </label><br>
                     <label>Last Name: 
-                        <input type="text" name="lastName" value="Chernoivan" required>
+                        <input type="text" name="lastName" value="Chernoivan" placeholder="Last Name" required>
                     </label><br>
                     <label>Acknowledgment Statement:
-                        <input type="text" name="ackStatement" value="I understand that what I put here is publicly available on the web and I won't put anything here I don't want the public to see" required>
+                        <input type="text" name="ackStatement" value="I understand that what I put here is publicly available on the web and I won't put anything here I don't want the public to see" placeholder="Enter Acknowledgment Statement" required>
                     </label><br>
-                    <label>Acknowledgment Date (YYYY-MM-DD): 
-                        <input type="date" name="ackDate" value="2026-01-13">
+                    <label>Acknowledgment Date (MM-DD-YYYY): 
+                        <input type="date" name="ackDate" value="2026-01-13" required>
                     </label><br>
                     <label>Mascot Adjective:
-                        <input type="text" name="mascotAdj" value="Sweet" required>
+                        <input type="text" name="mascotAdj" value="Sweet" placeholder="Mascot Adjective" required>
                     </label><br>
                     <label>Mascot Animal: 
-                        <input type="text" name="mascotAnimal" value="Cat" required>
+                        <input type="text" name="mascotAnimal" value="Cat" placeholder="Mascot Animal" required>
                     </label><br>
                     <label>Divider: 
-                        <input type="text" name="divider" value="|" required>
+                        <input type="text" name="divider" value="|" placeholder="Divider" required>
                     </label>
                 </fieldset>
                 <br>
                 <fieldset>
                     <legend>Image</legend>
                     <label>
-                        <input type="file">
+                        <input type="file" id="imageInput" accept="image/*">
                     </label><br><br>
                     <label>Picture Caption:
-                        <input type="text" name="picCaption" value="One of my favorite beach spots in California." required>
+                        <input type="text" name="picCaption" value="One of my favorite beach spots in California." placeholder="Caption" required>
                     </label><br>
                 </fieldset>
                 <br>
                 <fieldset>
                     <legend>Background</legend>
                     <label>Personal Statement:
-                        <textarea name="personalStatement" required>I just transferred to UNC Charlotte from CPCC and I am a junior studying computer science with a concentration in Web/Mobile Development and Software Engineering.</textarea>
+                        <textarea name="personalStatement" placeholder="Personal Statement" required>I just transferred to UNC Charlotte from CPCC and I am a junior studying computer science with a concentration in Web/Mobile Development and Software Engineering.</textarea>
                     </label><br>
                     <label>Personal Background:
-                        <textarea name="personalBackground" required>I am 21 years old and I love photography, painting, and traveling.</textarea>
+                        <textarea name="personalBackground" placeholder="Personal Background" required>I am 21 years old and I love photography, painting, and traveling.</textarea>
                     </label><br>
                     <label>Professional Background:
-                        <textarea name="professionalBackground" required>I have been working in retail for a few years.</textarea>
+                        <textarea name="professionalBackground" placeholder="Professional Background" required>I have been working in retail for a few years.</textarea>
                     </label><br>
                     <label>Academic Background:
-                        <textarea name="academicBackground" required>I just transferred to UNC Charlotte this semester after completing my associate degree from CPCC. I am a junior studying computer science with a concentration in Web/Mobile Development and Software Engineering.</textarea>
+                        <textarea name="academicBackground" placeholder="Academic Background" required>I just transferred to UNC Charlotte this semester after completing my associate degree from CPCC. I am a junior studying computer science with a concentration in Web/Mobile Development and Software Engineering.</textarea>
                     </label><br>
                     <label>Background in this Subject:
-                        <textarea name="subjectBackground" required> I have limited experience in web development but I have experience in programming using Java.</textarea>
+                        <textarea name="subjectBackground" placeholder="Subject Background" required> I have limited experience in web development but I have experience in programming using Java.</textarea>
                     </label><br>
                     <label>Primary Work Computer:
-                        <textarea name="primaryComp" required>The laptop I use for school is a Macbook Pro 13-inch M1.</textarea>
+                        <textarea name="primaryComp" placeholder="Primary Computer" required>The laptop I use for school is a Macbook Pro 13-inch M1.</textarea>
                     </label><br>
                     <label>Backup Work Computer & Location Plan:
-                        <textarea name="backupComp" required>I have a Windows PC computer at home I can use as a backup.</textarea>
+                        <textarea name="backupComp" placeholder="Backup Computer" required>I have a Windows PC computer at home I can use as a backup.</textarea>
                     </label><br>
                 </fieldset>
                 <br>
@@ -94,38 +94,38 @@
                     <legend>Courses</legend>
                     <div id="courses">
                         <div data-course>
-                            <input type="text" class="course-dept" name="course-dept[]" value="ITSC" required>
-                            <input type="text" class="course-num" name="course-num[]" value="2600" required>
-                            <input type="text" class="course-name" name="course-name[]" value="Computer Science Program, Identity, Career" required>
-                            <input type="text" class="course-reason" name="course-reason[]" value="Required course." required>
+                            <input type="text" class="course-dept" name="course-dept[]" value="ITSC" placeholder="Course Department" required>
+                            <input type="text" class="course-num" name="course-num[]" value="2600" placeholder="Course Number" required>
+                            <input type="text" class="course-name" name="course-name[]" value="Computer Science Program, Identity, Career" placeholder="Course Name" required>
+                            <input type="text" class="course-reason" name="course-reason[]" value="Required course." placeholder="Course Reason" required>
                             <button type="button" class="delete-course" data-coursedelete>Delete</button>
                         </div>
                         <div data-course>
-                            <input type="text" class="course-dept" name="course-dept[]" value="ITIS" required>
-                            <input type="text" class="course-num" name="course-num[]" value="3130" required>
-                            <input type="text" class="course-name" name="course-name[]" value="Introduction to Human-Centered Computing" required>
-                            <input type="text" class="course-reason" name="course-reason[]" value="I thought this would be an interesting course." required>
+                            <input type="text" class="course-dept" name="course-dept[]" value="ITIS" placeholder="Course Department" required>
+                            <input type="text" class="course-num" name="course-num[]" value="3130" placeholder="Course Number" required>
+                            <input type="text" class="course-name" name="course-name[]" value="Introduction to Human-Centered Computing" placeholder="Course Name" required>
+                            <input type="text" class="course-reason" name="course-reason[]" value="I thought this would be an interesting course." placeholder="Course Reason" required>
                             <button type="button" class="delete-course" data-coursedelete>Delete</button>
                         </div>
                         <div data-course>
-                            <input type="text" class="course-dept" name="course-dept[]" value="ITIS" required>
-                            <input type="text" class="course-num" name="course-num[]" value="3135" required>
-                            <input type="text" class="course-name" name="course-name[]" value="Front-End Web Application Development" required>
-                            <input type="text" class="course-reason" name="course-reason[]" value="Useful course." required>
+                            <input type="text" class="course-dept" name="course-dept[]" value="ITIS" placeholder="Course Department" required>
+                            <input type="text" class="course-num" name="course-num[]" value="3135" placeholder="Course Number" required>
+                            <input type="text" class="course-name" name="course-name[]" value="Front-End Web Application Development" placeholder="Course Name" required>
+                            <input type="text" class="course-reason" name="course-reason[]" value="Useful course." placeholder="Course Reason" required>
                             <button type="button" class="delete-course" data-coursedelete>Delete</button>
                         </div>
                         <div data-course>
-                            <input type="text" class="course-dept" name="course-dept[]" value="ITSC" required>
-                            <input type="text" class="course-num" name="course-num[]" value="3688" required>
-                            <input type="text" class="course-name" name="course-name[]" value="Computers and Their Impact on Society" required>
-                            <input type="text" class="course-reason" name="course-reason[]" value="Required course." required>
+                            <input type="text" class="course-dept" name="course-dept[]" value="ITSC" placeholder="Course Department" required>
+                            <input type="text" class="course-num" name="course-num[]" value="3688" placeholder="Course Number" required>
+                            <input type="text" class="course-name" name="course-name[]" value="Computers and Their Impact on Society" placeholder="Course Name" required>
+                            <input type="text" class="course-reason" name="course-reason[]" value="Required course." placeholder="Course Reason" required>
                             <button type="button" class="delete-course" data-coursedelete>Delete</button>
                         </div>
                         <div data-course>
-                            <input type="text" class="course-dept" name="course-dept[]" value="ITCS" required>
-                            <input type="text" class="course-num" name="course-num[]" value="3112" required>
-                            <input type="text" class="course-name" name="course-name[]" value="Design Implementation of Object-Oriented Systems" required>
-                            <input type="text" class="course-reason" name="course-reason[]" value="I thought this course would be useful and it is a required course." required>
+                            <input type="text" class="course-dept" name="course-dept[]" value="ITCS" placeholder="Course Department" required>
+                            <input type="text" class="course-num" name="course-num[]" value="3112" placeholder="Course Number" required>
+                            <input type="text" class="course-name" name="course-name[]" value="Design Implementation of Object-Oriented Systems" placeholder="Course Name" required>
+                            <input type="text" class="course-reason" name="course-reason[]" value="I thought this course would be useful and it is a required course." placeholder="Course Reason" required>
                             <button type="button" class="delete-course" data-coursedelete>Delete</button>
                         </div>
                     </div>
@@ -135,16 +135,16 @@
                 <fieldset>
                     <legend>Extras</legend>
                     <label>Funny/Interesting item to remember me by (Optional):
-                        <input type="text" name="funnyItem" value="">
+                        <input type="text" name="funnyItem" value="" placeholder="Funny thing about you">
                     </label><br>
                     <label>I'd also like to share (Optional):
-                        <input type="text" name="addText" value="">
+                        <input type="text" name="addText" value="" placeholder="Additional text">
                     </label><br>
                     <label>Quote:
-                        <input type="text" name="quote" value="Life is short, the world is wide, and I want to make some memories." required>
+                        <input type="text" name="quote" value="Life is short, the world is wide, and I want to make some memories." placeholder="Quote" required>
                     </label><br>
                     <label>Quote Author:
-                        <input type="text" name="quoteAuthor" value="Donna Sheridan" required>
+                        <input type="text" name="quoteAuthor" value="Donna Sheridan" placeholder="Quote Author" required>
                     </label><br>
                 </fieldset>
                 <br>
@@ -153,59 +153,59 @@
                     <div id="websites">
                         <div data-website>
                             <label>Website Name:
-                                <input type="text" class="website-name" name="urlname[]" value="CLT Web" required>
+                                <input type="text" class="website-name" name="urlname[]" value="GitHub" placeholder="Website Name" required>
                             </label>
                             <label>URL:
-                                <input type="url" class="link-url" name="url[]" value="https://webpages.charlotte.edu/achernoi/" required>
+                                <input type="url" class="link-url" name="url[]" value="https://github.com/achernoi" placeholder="URL" required>
                             </label>
                             <button type="button" class="delete-link" data-websitedelete>Delete</button>
                         </div>
                         <div data-website>
                             <label>Website Name:
-                                <input type="text" class="website-name" name="urlname[]" value="GitHub.io" required>
+                                <input type="text" class="website-name" name="urlname[]" value="GitHub.io" placeholder="Website Name" required>
                             </label>
                             <label>URL:
-                                <input type="url" class="link-url" name="url[]" value="https://achernoi.github.io" required>
+                                <input type="url" class="link-url" name="url[]" value="https://achernoi.github.io" placeholder="URL" required>
                             </label>
                             <button type="button" class="delete-link" data-websitedelete>Delete</button>
                         </div>
                         <div data-website>
                             <label>Website Name:
-                                <input type="text" class="website-name" name="urlname[]" value="GitHub" required>
+                                <input type="text" class="website-name" name="urlname[]" value="CLTWeb" placeholder="Website Name" required>
                             </label>
                             <label>URL:
-                                <input type="url" class="link-url" name="url[]" value="https://github.com/achernoi" required>
+                                <input type="url" class="link-url" name="url[]" value="https://webpages.charlotte.edu/achernoi/" placeholder="URL" required>
                             </label>
                             <button type="button" class="delete-link" data-websitedelete>Delete</button>
                         </div>
                         <div data-website>
                             <label>Website Name:
-                                <input type="text" class="website-name" name="urlname[]" value="freeCodeCamp" required>
+                                <input type="text" class="website-name" name="urlname[]" value="ITIS3135" placeholder="Website Name" required>
                             </label>
                             <label>URL:
-                                <input type="url" class="link-url" name="url[]" value="https://www.freecodecamp.org/achernoi" required>
+                                <input type="url" class="link-url" name="url[]" value="https://achernoi.github.io/itis3135/index.html" placeholder="URL" required>
                             </label>
                             <button type="button" class="delete-link" data-websitedelete>Delete</button>
                         </div>
                         <div data-website>
                             <label>Website Name:
-                                <input type="text" class="website-name" name="urlname[]" value="LinkedIn" required>
+                                <input type="text" class="website-name" name="urlname[]" value="LinkedIn" placeholder="Website Name" required>
                             </label>
                             <label>URL:
-                                <input type="url" class="link-url" name="url[]" value="https://www.linkedin.com/in/sashachernoivan/" required>
+                                <input type="url" class="link-url" name="url[]" value="https://www.linkedin.com/in/sashachernoivan/" placeholder="URL" required>
                             </label>
                             <button type="button" class="delete-link" data-websitedelete>Delete</button>
                         </div>
                     </div>
                     <button type="button" id="addWebsiteLinkBtn">Add Link</button>
-                    <div>
-                        <button type="submit">Submit</button>
+                </fieldset>
+                <div><br>
+                        <button type="submit" id="submitBtn">Submit</button>
                         <button type="reset" id="resetBtn">Reset</button>
                         <button type="button" id="clearButton">Clear</button>
-                        <button type="button" onclick="generateHtml();">Generate HTML</button>
-                        <button type="button" onclick="generateJson();">Generate JSON</button>
+                        <button type="button" id="generateHtml" onclick="generateHtml();">Generate HTML</button>
+                        <button type="button" id="generateJson" onclick="generateJson();">Generate JSON</button>
                     </div>
-                </fieldset>
                 <br>
             </form>
             <div id="output_result" style="display: none"></div>
