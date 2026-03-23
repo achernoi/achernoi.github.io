@@ -1,4 +1,23 @@
 const htmlTemplate = `
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sasha Chernoivan | Introduction</title>
+        <link rel="stylesheet" href="../styles/default.css">
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <h1>
+                Sasha Chernoivan
+            </h1>
+            <nav>
+                <a href="index.html">Home</a>
+            </nav>    
+        </header>
+        <main>
         <h2>Introduction</h2>
         <figure>
             <img src="itis3135/images/myimage.png" alt="My introduction image." height="400" width="300">
@@ -27,6 +46,9 @@ const htmlTemplate = `
         <div style="text-align: center; margin-top: 30px;">
             <button type="button" id="resetBtnResult">Fill out the form again</button>
         </div>
+        </main>
+    </body>
+ </html>   
  `;
 
 function getValue(el) {
@@ -259,7 +281,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const introductionData = createJsonFromForm(form, courcesSections, websiteSections);
 
 
-        outputdiv.innerHTML = renderTemplate(htmlTemplate, introductionData);
+        //outputdiv.innerHTML = renderTemplate(htmlTemplate, introductionData);
+        document.querySelector('html').innerHTML = renderTemplate(htmlTemplate, introductionData);
         form.style.display = "none";
         outputdiv.style.display = "block";
 
