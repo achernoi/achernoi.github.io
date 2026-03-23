@@ -42,7 +42,7 @@ fieldset {
     border-radius: 4px;
 }
 
-#resetBtn, #clearButton, #generateHtml, #generateJson, #submitBtn {
+#resetBtn, #clearButton, #generateHtmlBtn, #generateJsonBtn, #submitBtn {
     padding: 10px 12px;
     margin-top: 4px;
     border: none;
