@@ -9,3 +9,26 @@
 .logo {
   text-align: center;
 }
+
+.nav-bar {
+  display: flex;
+  text-align: center;
+  background-color: rgb(169, 195, 208);
+  
+  font-family: sans-serif;
+  color:rgb(160, 191, 209)
+}
+
+.nav-link {
+  color: rgb(49, 90, 120);
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  background-color: rgb(152, 183, 221);
+}

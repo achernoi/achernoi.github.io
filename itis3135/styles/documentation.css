@@ -1,10 +1,10 @@
 * {
   box-sizing: border-box;
 }
-
+/*
 body {
   background-color: lightblue;
-}
+}*/
 
 @media screen and (max-width: 600px) {
   body {
@@ -55,5 +55,5 @@ h2 {
 
 h3 {
   text-align: center;
-  color:rgb(195, 233, 251)
+  color:rgb(195, 233, 251);
 }
