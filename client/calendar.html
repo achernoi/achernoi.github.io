@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<header><h1>Planting Calendar</h1></header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="plants.html">Plant Guides</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="tools.html">Tools</a>
+    <a href="guide.html">Guide</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+    <p>Enter a season for more information:</p>
+    <select id="season" onchange="updateCalendar()">
+        <option value="">Select Season</option>
+        <option value="spring">Spring</option>
+        <option value="summer">Summer</option>
+        <option value="fall">Fall</option>
+    </select>
+
+    <p id="calendarOutput">Select a season.</p>
+</main>
+
+<footer>
+    <p>Garden Hub</p>
+</footer>
+
+</body>
+</html>
