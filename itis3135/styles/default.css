@@ -17,7 +17,8 @@ header nav {
     background-color: #aed2d2;
     border-top: 0.1px solid #c2eaea;
     border-bottom: 0.1px solid #aed2d2;
-    padding-bottom: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     text-align: center;
 }
 
@@ -25,6 +26,7 @@ header nav a {
     color: #2f4550ff;
     text-decoration: none;
     font-size: 1.2em;
+    margin-right: 13px;
 }
 
 header nav a:hover {
@@ -60,6 +62,8 @@ footer nav {
     border-top: 0.1px solid #c1e8e8;
     border-bottom: 0.1px solid #c1e8e8;
     text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     bottom: 0px;
     width: 100%;
     /*position: fixed;*/
