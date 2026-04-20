@@ -49,6 +49,10 @@ main {
     flex-grow: 1;
 }
 
+li {
+  line-height: 1.4; 
+}
+
 p {
     margin-bottom: 1em;
 }
