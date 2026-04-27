@@ -1,5 +1,5 @@
 // Calendar dropdown
-function updateCalendar() {
+function selectSeasonPlants() {
     const season = document.getElementById("season").value;
     const output = document.getElementById("calendarOutput");
 

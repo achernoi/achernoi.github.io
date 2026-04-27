@@ -1,38 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Calendar</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div data-include="components/header.html"></div>
 
-<header><h1>Planting Calendar</h1></header>
+    <main>
+        <p>Enter a season for more information:</p>
+        <select id="season" onchange="selectSeasonPlants()">
+            <option value="">Select Season</option>
+            <option value="spring">Spring</option>
+            <option value="summer">Summer</option>
+            <option value="fall">Fall</option>
+        </select>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="plants.html">Plant Guides</a>
-    <a href="calendar.html">Calendar</a>
-    <a href="tools.html">Tools</a>
-    <a href="guide.html">Guide</a>
-    <a href="contact.html">Contact</a>
-</nav>
+        <p id="calendarOutput">Select a season.</p>
 
-<main>
-    <p>Enter a season for more information:</p>
-    <select id="season" onchange="updateCalendar()">
-        <option value="">Select Season</option>
-        <option value="spring">Spring</option>
-        <option value="summer">Summer</option>
-        <option value="fall">Fall</option>
-    </select>
+        <div class="box">
+            <h2 id="month">.</h2>
+            <p id="tip"></p>
 
-    <p id="calendarOutput">Select a season.</p>
-</main>
+            <button id="prevBtn">⬅ Prev</button>
+            <button id="nextBtn">Next ➡</button>
+        </div>
+        <script src="scripts/calendar.js"></script>
+    </main>
 
-<footer>
-    <p>Garden Hub</p>
-</footer>
-
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
