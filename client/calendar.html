@@ -10,7 +10,50 @@
     <div data-include="components/header.html"></div>
 
     <main>
-        <p>Enter a season for more information:</p>
+        <h2>Understanding Seasons in Gardening</h2>
+        <div class="box" style="text-align: center;">
+            <h3 style="margin-top: 1px; margin: 5px;">Monthly Tips:</h3>
+            <h2 id="month" style="text-align: center;">.</h2>
+            <p id="tip"></p>
+
+            <button id="prevBtn">⬅ Prev</button>
+            <button id="nextBtn">Next ➡</button>
+        </div>
+
+        <p>Gardening changes throughout the year because plants respond to temperature, daylight, and soil conditions. 
+            Each season creates different growing opportunities and challenges. Rather than growing everything at once, 
+            successful gardening depends on working with the season.
+        </p>
+
+        <h3>Spring</h3>
+        <p>Spring is a transition season where soil begins to warm and plants restart active growth. It is typically used 
+            for establishing early crops and preparing the garden for summer.
+        </p>
+        <ul>
+            <li>Best for cool-season and early growth crops.</li>
+            <li>Soil moisture is naturally higher.</li>
+            <li>Risk of late frost may still exist in early spring.</li>
+        </ul>
+
+        <h3>Summer</h3>
+        <p>Spring is a transition season where soil begins to warm and plants restart active growth. It is typically used 
+            for establishing early crops and preparing the garden for summer.
+        </p>
+        <ul>
+            <li>Best for fruiting and heat-tolerant crops.</li>
+            <li>Higher water demand.</li>
+            <li>Increased pest and heat stress management.</li>
+        </ul>
+
+        <h3>Fall</h3>
+        <p>Fall is a cooling season that supports stable growth and improved flavor development in many crops.</p>
+        <ul>
+            <li>Best for leafy greens and root vegetables.</li>
+            <li>Reduced pest pressure.</li>
+            <li>Shorter daylight slows growth gradually.</li>
+        </ul>
+
+        <p>Enter a season for more information on specific crops to plant:</p>
         <select id="season" onchange="selectSeasonPlants()">
             <option value="">Select Season</option>
             <option value="spring">Spring</option>
@@ -20,13 +63,6 @@
 
         <p id="calendarOutput">Select a season.</p>
 
-        <div class="box">
-            <h2 id="month">.</h2>
-            <p id="tip"></p>
-
-            <button id="prevBtn">⬅ Prev</button>
-            <button id="nextBtn">Next ➡</button>
-        </div>
         <script src="scripts/calendar.js"></script>
     </main>
 

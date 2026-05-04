@@ -2,7 +2,7 @@
 const gardenCalendar = {
   January: "Plan your garden and order seeds 🌱",
   February: "Start seeds indoors 🌿",
-  March: "Plant cool-season crops (lettuce, spinach)",
+  March: "Plant cool-season crops (lettuce, kale) 🌱",
   April: "Start planting vegetables outside 🌼",
   May: "Great time for tomatoes and peppers 🍅",
   June: "Water regularly and maintain plants 💧",
