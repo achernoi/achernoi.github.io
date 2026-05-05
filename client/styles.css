@@ -16,7 +16,7 @@ header {
 }
 
 nav {
-    background-color: #4caf50;
+    background-color: #46a549;
     padding: 10px;
     text-align: center;
 }
@@ -180,6 +180,6 @@ form input, form textarea, select {
 footer {
     text-align: center;
     color: white;
-    background-color: #4caf50;
+    background-color: #3a923d;
     padding: 1px;
 }
