@@ -1,7 +1,7 @@
-const openBtn = document.getElementById("openPopup");
+const openBtn = document.getElementById("open-popup");
 const overlay = document.getElementById("overlay");
-const closeBtn = document.getElementById("closePopup");
-const textElement = document.getElementById("randomText");
+const closeBtn = document.getElementById("close-popup");
+const textElement = document.getElementById("random-text");
 
 const messages = [
   "Water plants early in the morning 🌅",

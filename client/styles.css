@@ -98,6 +98,20 @@ ul {
     font-size: 18px;
 }
 
+#open-popup {
+    margin-top: 10px;
+    width: 180px;
+    /*background-color: #075309;*/
+}
+
+#random-text {
+    color: rgb(154, 242, 154);
+}
+
+.popup-content {
+    padding: 10px;
+}
+
 button {
   width: 20px;
   height: 35px;
@@ -107,6 +121,7 @@ button {
   color: white;
   border-radius: 10%;
   cursor: pointer;
+  
 
   display: inline-flex;
   justify-content: center;
@@ -123,7 +138,7 @@ button:hover {
 }
 
 button, input[type="submit"] {
-    background-color: #2e7d32;
+    background-color: #195b1c;
     color: white;
     border: none;
     width: 20%;
@@ -148,13 +163,18 @@ button, input[type="submit"] {
     }
 
 button:hover, input[type="submit"]:hover {
-    background-color: #1b5e20;
+    background-color: #529757;
 }
 
 form input, form textarea, select {
     width: 50%;
     box-sizing: border-box;
     margin: 5px 0 15px 0;
+}
+
+#footer-nav {
+    text-align: center; 
+    margin-bottom: 5px;
 }
 
 footer {
