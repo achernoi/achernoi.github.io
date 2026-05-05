@@ -1,72 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Calendar</title>
+    <title>Moon Calendar</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div data-include="components/header.html"></div>
 
-    <main>
-        <h2>Understanding Seasons in Gardening</h2>
-        <div class="box" style="text-align: center;">
-            <h3 style="margin-top: 1px; margin: 5px;">Monthly Tips:</h3>
-            <h2 id="month" style="text-align: center;">.</h2>
-            <p id="tip"></p>
+<div data-include="components/header.html"></div>
 
-            <button id="prevBtn">⬅ Prev</button>
-            <button id="nextBtn">Next ➡</button>
-        </div>
+<main>
+    <h1 style="text-align: left; color: rgb(27, 97, 27);">Gardening Around the Full Moon</h1>
+    <div class="box" style="text-align: center; margin-top: 1px;">
+        <h3 style="text-align: center; font-size: 25px; margin: 5px;">Full Moon Countdown</h3>
+        <p>Time until the next full moon: </p>
 
-        <p>Gardening changes throughout the year because plants respond to temperature, daylight, and soil conditions. 
-            Each season creates different growing opportunities and challenges. Rather than growing everything at once, 
-            successful gardening depends on working with the season.
-        </p>
+        <div id="timer">Loading...</div>
+    </div>
 
-        <h3>Spring</h3>
-        <p>Spring is a transition season where soil begins to warm and plants restart active growth. It is typically used 
-            for establishing early crops and preparing the garden for summer.
-        </p>
-        <ul>
-            <li>Best for cool-season and early growth crops.</li>
-            <li>Soil moisture is naturally higher.</li>
-            <li>Risk of late frost may still exist in early spring.</li>
-        </ul>
+    <h3>Why does the full moon matter for gardening?</h3>
+    <p>Some gardeners follow lunar gardening, a traditional method that times planting with the moon's phases. 
+        The idea is that the moon's gravitational pull can influence soil moisture, while increased moonlight 
+        may support leaf growth. Because of this, the period around a full moon is often linked to strong above-ground 
+        development.
+    </p>
+    <p>
+        Lunar gardening has been practiced for centuries and is based on the idea that the moon affects water movement in soil, similar to ocean tides.
+        During the waxing phases (from new moon to full moon), gardeners often focus on planting and growth. During the waning phases (after the full moon), 
+        attention shifts to pruning, harvesting, and soil care. 
+    </p>
 
-        <h3>Summer</h3>
-        <p>Spring is a transition season where soil begins to warm and plants restart active growth. It is typically used 
-            for establishing early crops and preparing the garden for summer.
-        </p>
-        <ul>
-            <li>Best for fruiting and heat-tolerant crops.</li>
-            <li>Higher water demand.</li>
-            <li>Increased pest and heat stress management.</li>
-        </ul>
+    <h3>What to do</h3>
+    <p>If you'd like to garde by the moon, this is a great time to focus on plants that grow above the soil.</p>
+    <ul>
+        <li>Plant leafy greens (lettuce, spinach, kale)</li>
+        <li>Sow herbs and flowering plants</li>
+        <li>Water regularly to help plants grow strong</li>
+    </ul>
+    
+    <h3>Moon Phase Guide</h3>
+    <ul>
+        <li>New Moon --> Plant roots crops (carrots, potatoes, onions)</li>
+        <li>First Quarter --> Plant above-ground crops (beans, tomatoes)</li>
+        <li>Full Moon --> Focus on leafy growth and transplanting</li>
+        <li>Last Quarter --> Prune, weed, and improve soil</li>
+    </ul>
+    
+  <script src="scripts/countdown.js"></script>
+</main>
 
-        <h3>Fall</h3>
-        <p>Fall is a cooling season that supports stable growth and improved flavor development in many crops.</p>
-        <ul>
-            <li>Best for leafy greens and root vegetables.</li>
-            <li>Reduced pest pressure.</li>
-            <li>Shorter daylight slows growth gradually.</li>
-        </ul>
 
-        <p>Enter a season for more information on specific crops to plant:</p>
-        <select id="season" onchange="selectSeasonPlants()">
-            <option value="">Select Season</option>
-            <option value="spring">Spring</option>
-            <option value="summer">Summer</option>
-            <option value="fall">Fall</option>
-        </select>
+<div data-include="components/footer.html"></div>
+<script src="scripts/HTMLInclude.min.js"></script>
 
-        <p id="calendarOutput">Select a season.</p>
-
-        <script src="scripts/calendar.js"></script>
-    </main>
-
-    <div data-include="components/footer.html"></div>
-    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
