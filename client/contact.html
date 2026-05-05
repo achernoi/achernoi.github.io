@@ -15,13 +15,46 @@
     <p>Have a gardening question, suggestion, or something you're stuck on? Whether you're trying your first plant or 
         you have a garden issue, feel free to reach out. Please fill out the form below to contact us:
     </p>
-<form onsubmit="return validateForm()">
-    <label >Enter your name:</label><br>
-    <input type="text" id="name" placeholder="Your full name" style="padding: 4px;"><br>
-    <label>Enter your email:</label><br>
-    <input type="text" id="email" placeholder="yourname@example.com" style="padding: 4px;"><br>
-    <label>Enter your message:</label><br>
-    <textarea id="message" placeholder="Your message for us" style="padding: 4px;"></textarea><br>
+
+    <form onsubmit="return validateForm()">
+        <div class="form-group">
+        <label for="name">Name</label>
+        <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Your full name"
+            required
+            autocomplete="name"
+        />
+        <span class="field-msg" id="nameMsg"></span>
+        </div>
+
+        <div class="form-group">
+        <label for="email">Email</label>
+        <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            required
+            autocomplete="email"
+        />
+        <span class="field-msg" id="emailMsg"></span>
+        </div>
+
+        <div class="form-group">
+        <label for="comments">
+            Enter your message:
+        </label>
+        <textarea
+            id="comments"
+            name="comments"
+            rows="4"
+            placeholder="Your message for us..."
+            style="width: 100%; resize: vertical"
+        ></textarea>
+        </div>
     <input type="submit" value="Submit">
 </form>
 </main>

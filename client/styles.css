@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #2a792d;
+    background-color: #237125;
     color: white;
     padding: 15px;
     text-align: center;
@@ -16,7 +16,7 @@ header {
 }
 
 nav {
-    background-color: #46a549;
+    background-color: #3d9740;
     padding: 10px;
     text-align: center;
 }
@@ -180,6 +180,6 @@ form input, form textarea, select {
 footer {
     text-align: center;
     color: white;
-    background-color: #3a923d;
+    background-color: #358537;
     padding: 1px;
 }
